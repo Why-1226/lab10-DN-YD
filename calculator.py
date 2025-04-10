@@ -7,25 +7,28 @@ One function per operation, in order.
 # First example
 import math
 def add(a, b): 
-    return a + b
+    a + b
 
 def sub(a, b):
-    return a - b
+    a - b
 
 def mul(a, b):
-    return a * b
+    a * b
 
 def div(a, b):
-    if a == 0:
-        raise ZeroDivisionError
-    else:
-        return b / a
+    try:
+        b / a
+    except ZeroDivisionError:
+        print("Can't divide by zero")
 
-def log(a, b):
-    return math.log(b, a)
+def log(a ,b):
+    try:
+        math.log(b, a)
+    except ValueError:
+        print("Must put in valid inputs")
 
 def exp(a, b):
-    return a ** b
+    a ** b
 
 # YD Section
 
@@ -45,13 +48,6 @@ def subtract(a,b):
 
 def multiply(a,b):
     return a * b
-
-def divide(a, b):  # raise ZeroDivisionError if a== 0
-    try:
-        b / a
-
-    if a == 0:
-        raise ZeroDivisionError
 
 def logarithm(a, b): # use math library/raise Value Error
     return math.log(b,a)

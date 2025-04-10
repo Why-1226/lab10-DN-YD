@@ -33,43 +33,30 @@ def exp(a, b):
 # YD Section
 
 def square_root(a):
-    try: math.sqrt(a)
+    return math.sqrt(a)
 
-    except ValueError:
-        if a < 0:
-            print("The number cannot be negative.")
 
 def hypotenuse(a,b):
-    try: math.hypot(a,b)
-
-
-
-
-
-
-
+    return math.hypot(a,b)
 
 
 def add(a,b):
-     a + b
+    return a + b
 
 def subtract(a,b):
-     a - b
+    return a - b
 
 def multiply(a,b):
-     a * b
+    return a * b
 
 def divide(a, b):  # raise ZeroDivisionError if a== 0
     try: b / a
 
-    except ZeroDivisionError:
-        print("You can't divide by zero")
+    if a == 0:
+        raise ZeroDivisionError
 
 def logarithm(a, b): # use math library/raise Value Error
-    try: math.log(b,a)
-
-    except ValueError:
-        print("")
+    return math.log(b,a)
 
 def exponent(a, b):
-    a ** b
+    return a ** b
